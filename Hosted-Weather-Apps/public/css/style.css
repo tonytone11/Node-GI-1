@@ -1,20 +1,23 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     min-height: 100vh;
     color: #333333;
     font-family: arial;
-    max-width: 650px;
+    /* max-width: 650px; */
     margin: 0 auto;
     padding: 0 16px;
 }
 
 .main-content {
-    flex-grow: 1;
+    flex-grow: .5;
 }
 
 header {
     margin: 16px 0 48px 0;
+    text-align: center;
 }
 
 header a {
@@ -26,6 +29,7 @@ header a {
 h1 {
     font-size: 64px;
     margin: 0 0 16px 0;
+    text-align: center;
 }
 
 .portrait {
@@ -33,6 +37,11 @@ h1 {
 }
 
 input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+select {
     border: 1px solid #cccccc;
     padding: 8px;
 }
