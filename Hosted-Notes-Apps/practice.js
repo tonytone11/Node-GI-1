@@ -56,7 +56,7 @@ yargs.command({
     command: 'read',
     describe: 'Read a note',
     handler(argv) {
-        notes.readNotes(argv.title)
+        notes.readNote(argv.title)
     }
 })
 
