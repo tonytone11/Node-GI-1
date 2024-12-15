@@ -1,5 +1,6 @@
 const fs = require('fs')
 const chalk = require('chalk')
+const { title } = require('process')
 
 const addNote = function (title, body) {
     const notes = loadNotes()
@@ -66,9 +67,23 @@ const loadNotes = () => {
     }
 }
 
+const editNotes = (title, body) => {
+    const notes = loadNotes();
+    const note = notes.find((note) => note.title === title)
+
+    if (note) {
+        note.body = body;
+        saveNotes(notes);
+        console.log('Notes updated!');
+    } else {
+        console.log('Note not found');
+    }
+}
+
 module.exports = {
     addNote: addNote,
     removeNote: removeNote,
     listNotes: listNotes,
-    readNote: readNote
+    readNote: readNote,
+    editNotes: editNotes
 }
