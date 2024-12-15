@@ -6,6 +6,7 @@ const temperatureOptions = document.querySelector('#temperature')
 
 messageOne.textContent = 'From JavaScript'
 
+
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
